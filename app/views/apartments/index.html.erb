@@ -1,7 +1,7 @@
 <h1>Apartments</h1>
 
-
-<table>
+<br>
+<table class="table table-striped table-hover">
     <tr>
         <th>Number</th>
         <th>Building id</th>
@@ -12,11 +12,12 @@
         <td> <%= app.number %>  </td>
         <td> <%= app.building.id %>  </td>
         <td>
-            <%= link_to "Show", controller: "apartments", action: "show", id: app.id %>
+            <%= link_to "Show", apartment_url(app.id), class: "btn btn-info btn-sm" %>
         </td>
 
     </tr>
     <% end %>
 </table>
 
-<%= link_to "New", controller: "apartments", action: "new" %>
+<br>
+<%= link_to "New", new_apartment_url, class: "btn btn-primary" %>

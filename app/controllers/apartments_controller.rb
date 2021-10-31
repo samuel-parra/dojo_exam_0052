@@ -1,5 +1,5 @@
 class ApartmentsController < ApplicationController
-  layout false
+    # layout false
   def index
     @apartments = Apartment.all.order(:building_id)
   end
