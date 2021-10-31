@@ -1,0 +1,13 @@
+<h1>New Apartment</h1>
+
+<%= form_for(@apartment, :url => apartments_path, :method => "post") do |f| %>
+<%= f.label :Building %>
+<%= f.select :building_id, options_from_collection_for_select(@buildings, :id, :name) %>
+<br>
+<%= f.label :Number %>
+<%= f.text_field :number %>
+<br>
+<%= f.submit :"Add" %>
+<% end %>   
+
+<%= link_to "Return", controller: "apartments", action: "index" %>

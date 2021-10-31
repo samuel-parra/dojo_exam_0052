@@ -1,0 +1,22 @@
+<h1>Apartments</h1>
+
+
+<table>
+    <tr>
+        <th>Number</th>
+        <th>Building id</th>
+        <th>Actions</th>
+    </tr>
+    <% @apartments.each do |app| %>
+    <tr>
+        <td> <%= app.number %>  </td>
+        <td> <%= app.building.id %>  </td>
+        <td>
+            <%= link_to "Show", controller: "apartments", action: "show", id: app.id %>
+        </td>
+
+    </tr>
+    <% end %>
+</table>
+
+<%= link_to "New", controller: "apartments", action: "new" %>
