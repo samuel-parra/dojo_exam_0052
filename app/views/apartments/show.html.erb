@@ -1,2 +1,20 @@
-<h1>Apartments#show</h1>
-<p>Find me in app/views/apartments/show.html.erb</p>
+<h1>Apartment <%= @apartment.number %></h1>
+
+<h2>Information</h2>
+<table>
+    <tr>
+        <td>Name</td>
+        <td><%= @apartment.building.name %></td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td><%= @apartment.building.address %>, <%= @apartment.building.city %></td>
+    </tr>
+    <tr>
+        <td>Apartment Number</td>
+        <td><%= @apartment.number %></td>
+    </tr>    
+</table>
+
+<br>
+<%= link_to "Return", controller: "apartments", action: "index" %>
