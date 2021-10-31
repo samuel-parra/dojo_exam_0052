@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_10_30_233605) do
 
-  create_table "apartments", charset: "utf8mb4", force: :cascade do |t|
+  create_table "apartments", charset: "utf8", force: :cascade do |t|
     t.integer "number"
     t.bigint "building_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_10_30_233605) do
     t.index ["building_id"], name: "index_apartments_on_building_id"
   end
 
-  create_table "buildings", charset: "utf8mb4", force: :cascade do |t|
+  create_table "buildings", charset: "utf8", force: :cascade do |t|
     t.string "name"
     t.string "city"
     t.string "address"

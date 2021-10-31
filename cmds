@@ -1,0 +1,4 @@
+rails g model Building name:string city:string address:string
+rails g model Apartment number:integer building:references
+rails generate controller Buildings index new show
+rails generate controller Aparments index new show

@@ -12,13 +12,14 @@
     Building.create(name: "Edificio #{i+1}", city: "Concepción", address: "Calle principal numero #{100 + i}")
 }
 
-10.times {
-    |i| puts "#{i}"
-    nofapp =  rand(1..10)
-    puts "number of apparments #{nofapp}"
-    nofapp.times {
-        |j| puts "#{j}"
-        appnum = Building.find(j+1)
-        Apartment.create(number: (j+1), building: appnum)
-    }
-}
+
+10.times do |i|
+    nfapp = rand(1..10)
+    puts "number of apparments #{nfapp}"
+    nfapp.times do |j|
+        puts "#{j}"
+        building_num = Building.find(i+1)
+        appnum = j + 1
+        Apartment.create(number: appnum, building: building_num)
+    end
+end
