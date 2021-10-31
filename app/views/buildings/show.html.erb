@@ -1,4 +1,4 @@
-<h1>Buildings#show</h1>
+<h1>Building <%= @building.name %></h1>
 <p>Find me in app/views/buildings/show.html.erb</p>
 
 <table>
@@ -13,6 +13,9 @@
 </table>
 
 <table>
+    <tr>
+        <th>Number</th>
+    </tr>
 <% @building.apartments.each do |app|  %>
     <tr>
         <td>
@@ -22,3 +25,5 @@
 <% end %>
 
 </table>
+
+<%= link_to "Return", controller: "buildings", action: "index" %>

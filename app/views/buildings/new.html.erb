@@ -1,5 +1,4 @@
-<h1>Buildings#new</h1>
-<p>Find me in app/views/buildings/new.html.erb</p>
+<h1>New Building</h1>
 
 <%= form_for(@building, :url => buildings_path, :method => "post") do |f| %>
 <%= f.label :Name %>
@@ -13,3 +12,5 @@
 <br>
 <%= f.submit :"Add" %>
 <% end %>
+
+<%= link_to "Return", controller: "buildings", action: "index" %>
