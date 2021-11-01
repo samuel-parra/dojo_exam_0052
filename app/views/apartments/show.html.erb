@@ -1,7 +1,9 @@
-<h1>Apartment <%= @apartment.number %></h1>
+<div class="container">
 
+<h1>Apartment <%= @apartment.number %></h1>
+<br>
 <h2>Information</h2>
-<table>
+<table class="table table-bordered" >
     <tr>
         <td>Name</td>
         <td><%= @apartment.building.name %></td>
@@ -17,4 +19,5 @@
 </table>
 
 <br>
-<%= link_to "Return", controller: "apartments", action: "index" %>
+<%= link_to "Return", apartments_url, class: "btn btn-outline-secondary" %>
+</div>

@@ -1,16 +1,26 @@
-<h1>New Building</h1>
+<div class="container">
 
+
+<h1>New Building</h1>
+<br>
 <%= form_for(@building, :url => buildings_path, :method => "post") do |f| %>
-<%= f.label :Name %>
-<%= f.text_field :name %>
+<div class="mb-3">
+    <%= f.label :Name , class: "form-label" %>
+    <%= f.text_field :name , class: "form-control" %>
+</div>
 <br>
-<%= f.label :Adress %>
-<%= f.text_field :address %>
+<div class="mb-3">
+    <%= f.label :Adress , class: "form-label" %>
+    <%= f.text_field :address , class: "form-control" %>
+</div>
 <br>
-<%= f.label :City %>
-<%= f.text_field :city %>
+<div class="mb-3">
+    <%= f.label :City , class: "form-label" %>
+    <%= f.text_field :city , class: "form-control" %>
+</div>
 <br>
 <%= f.submit :"Add" %>
 <% end %>
-
-<%= link_to "Return", controller: "buildings", action: "index" %>
+<br>
+<%= link_to "Return", buildings_url, class: "btn btn-outline-secondary" %>
+</div>

@@ -1,16 +1,18 @@
+<div class="container">
+
 <h1>Apartments</h1>
 
 <br>
 <table class="table table-striped table-hover">
     <tr>
         <th>Number</th>
-        <th>Building id</th>
+        <th>Building Name</th>
         <th>Actions</th>
     </tr>
     <% @apartments.each do |app| %>
     <tr>
         <td> <%= app.number %>  </td>
-        <td> <%= app.building.id %>  </td>
+        <td> <%= app.building.name %>  </td>
         <td>
             <%= link_to "Show", apartment_url(app.id), class: "btn btn-info btn-sm" %>
         </td>
@@ -21,3 +23,4 @@
 
 <br>
 <%= link_to "New", new_apartment_url, class: "btn btn-primary" %>
+</div>
